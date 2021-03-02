@@ -12,5 +12,5 @@ the protocol for doing something in the chat is as followed:
 Name length - Name - Command number - Message length/Name length (of the member to promote/kick/mute/write a private message to) - Message/Name
 For example: 6Maayan15Hello
 
-Only managers can promote/kick/mute.
+Only managers can promote/kick/mute. Names are allowed to be max 999 chars.
 
