@@ -2,7 +2,7 @@ import socket
 import select
 import msvcrt
 
-IP = '127.0.0.1'
+IP = # put the localhost to run on self machine
 PORT = 5555
 
 """ the name length and message will be 3 digit numbers (which means they are limited to a max length of 999) and 2 will be 002"""
@@ -21,7 +21,6 @@ while True:
     rlist, wlist, xlist = select.select(sock_list, sock_list, [])
 
     if rlist:
-        # print('hola')
         message = my_socket.recv(2048).decode()
         print(message)
         if message == "Kicked":
@@ -29,12 +28,7 @@ while True:
 
     if msvcrt.kbhit():
         data = msvcrt.getch().decode()
-        # print(data)
-        # if data == "":
-        # break
         print(data, end='', flush=True)
-        # print(data)
-        # print("hola")
         if data == '\r':
             if ''.join(text) == 'exit':
                 break
@@ -44,7 +38,6 @@ while True:
                     break
             messages.append(''.join(text) + '\n')
             text = []
-            # print("$$", messages, "$$")
         else:
             text.append(data)
 
