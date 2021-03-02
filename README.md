@@ -10,7 +10,7 @@ There are 5 commands possible that are recognized by their command number:
 
 the protocol for doing something in the chat is as followed:
 Name length - Name - Command number - Message length/Name length (of the member to promote/kick/mute/write a private message to) - Message/Name
-For example: 006Maayan15Hello
+For example: 006Maayan1005Hello
 
 Only managers can promote/kick/mute. Names are allowed to be of a max length of 999.
 
