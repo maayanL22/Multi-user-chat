@@ -21,7 +21,6 @@ def get_socket_by_name(n):
         cname, csocket = client
         print("name", cname, "socket", csocket)
         if cname == n:
-            # print("blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!@#@!#@!@#@!##@!#!@")
             return csocket
     return ""
 
@@ -67,7 +66,6 @@ while True:
                     name = name1
                 if (name1, current_socket) not in CLIENTS:
                     CLIENTS.append((name1, current_socket))
-                # print(CLIENTS)
                 if len(data) <= 4 + name_length:
                     if current_socket in wlist:
                         current_socket.send("Invalid message".encode())
@@ -181,7 +179,6 @@ while True:
                     if current_socket in wlist:
                         current_socket.send("Invalid order")
 
-                # messages_to_send.append((current_socket, data))
     for message in messages_to_send:
         current_socket, data = message
         for c_socket in wlist:
